@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 인라인 이벤트 핸들러로 한글 자모를 바로 반영 -->
+      <input type="text" :value="name" @input="name = $event.target.value" />
+      <br />
+      이름: <span>{{ name }}</span>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            name: '', // 입력된 이름을 저장할 데이터
+          };
+        },
+      }).mount('#app'); // Vue 애플리케이션을 id가 'app'인 요소에 마운트
+    </script>
+  </body>
+</html>
