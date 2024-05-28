@@ -8,7 +8,7 @@
   <body>
     <div id="app">
       <button
-        v-bind:style="style1"
+        v-bind:style="{backgroundColor:style1.backgroundColor}"
         @mouseover.stop="overEvent"
         @mouseout.stop="outEvent"
       >
