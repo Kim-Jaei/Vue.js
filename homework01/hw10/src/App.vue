@@ -4,6 +4,8 @@
   </div>
 </template>
 <script>
+let a = 1111;
+console.log(a.length);
 export default {};
 </script>
 <style lang=""></style>
